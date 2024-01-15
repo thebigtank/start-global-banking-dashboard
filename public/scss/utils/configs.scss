@@ -5,12 +5,17 @@
 	// Colors
 	--color-1: #ffffff;
 	--color-2: #000000;
+	--color-3: #074aec;
+	--color-4: #1b15bf;
+	--color-5: #e6e8eb;
+	--color-6: #f7f8fa;
+	--color-7: #7b7c7c;
 	// --color-hover: #1597bb;
 	// --color-active: #1597bb;
 	// --color-error: #7b113a;
 	// --color-success: #8fd6e1;
 
-	--body-bg-color: var(--color-1);
+	--body-bg-color: var(--color-6);
 	--body-color: var(--color-2);
 
 	// --link-color: var(--color-2);
@@ -59,8 +64,8 @@
 	// --btn-box-shadow-color: var(--color-1);
 
 	// Input Variables
-	// --input-text-color: var(--color-1);
-	// --input-background: #fff;
+	--input-text-color: var(--color-2);
+	--input-background: var(--color-5);
 
 	// --input-padding-top: 2em;
 	// --input-padding-bottom: 2em;
