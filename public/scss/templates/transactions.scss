@@ -11,9 +11,9 @@
         padding-bottom: rem(24);
         .title {
             font-family: $open_sans_semibold;
-            font-size: fluid(16, 18);
+            font-size: fluid(16, 22);
             text-transform: capitalize;
-            margin-bottom: rem(12)
+            margin-bottom: rem(22)
         }
 
         .filter-btn-grps {
@@ -26,12 +26,17 @@
                 min-width: rem(120);
                 @include flex(space-between, center, nowrap);
                 font-size: fluid(14, 14);
+
+                i {
+                    font-size: rem(16);
+                }
             }
         }
     }
 
     .filter-results {
-        padding: rem(40) 0;
+        padding: rem(34) 0;
+        @include flex(space-between, center, nowrap);
         border-top: 
             var(--btn-border-width) 
             var(--btn-border-style) 
@@ -40,6 +45,53 @@
             var(--btn-border-width) 
             var(--btn-border-style) 
             var(--btn-border-color);
+
+        &-wrap {
+            @include flex(space-between, center, nowrap);
+            gap: rem(38);
+
+            .description {
+                font-family: $open_sans_semibold;
+                text-transform: capitalize;
+            }
+
+            .tag {
+                @include flex(space-between, center, nowrap);
+                gap: rem(6);
+                font-family: $open_sans_medium;
+                font-size: fluid(12, 14);
+                text-transform: capitalize;
+                background-color: var(--color-5);
+                color: var(--color-7);
+                padding: rem(2) rem(16);
+                border-radius: rem(25);
+                cursor: pointer;
+
+                i {
+                    font-size: rem(22);
+                }
+            }
+        }
+
+        .export {
+            @include flex(space-between, center, nowrap);
+            gap: rem(12);
+            text-transform: uppercase;
+            color: var(--color-3);
+            font-size: fluid(12, 14);
+            padding: rem(6) rem(14);
+
+            i {
+                &:nth-child(1) {
+                    color: var(--color-3);
+                    font-size: rem(20);
+                }
+
+                &:last-of-type {
+                    font-size: rem(16);
+                }
+            }
+        }
     }
 
 
