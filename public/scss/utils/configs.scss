@@ -1,0 +1,90 @@
+// Our configs would be declared here
+
+
+:root {
+	// Colors
+	--color-1: #ffffff;
+	--color-2: #000000;
+	// --color-hover: #1597bb;
+	// --color-active: #1597bb;
+	// --color-error: #7b113a;
+	// --color-success: #8fd6e1;
+
+	--body-bg-color: var(--color-1);
+	--body-color: var(--color-2);
+
+	// --link-color: var(--color-2);
+	// --link-color-hover: var(--color-hover);
+
+	// Base Font
+	--base-font-family: #{$open_sans_regular};
+	--base-font-color: var(--color-2);
+	--base-line-height: 1.4;
+	// --base-font-weight: 600;
+
+	// Heading Font
+	// --heading-font-family: var(--base-font-family);
+	// --heading-line-height: 1;
+	// --heading-font-weight: 900;
+
+	// Base Border
+	// --base-border-color: rgba(172, 172, 172, 0.5);
+	// --base-border-radius: 30px;
+	// --base-border: 0.5px solid var(--btn-border-color);
+
+	// Button Variables
+	// --btn-text-color: var(--color-2);
+	// --btn-background: #e8ecdf;
+	// --btn-text-color-hover: var(--color-5);
+	// --btn-background-hover: var(--color-2);
+	// --btn-line-height: var(--base-line-height);
+	// --btn-font-weight: 600;
+	// --btn-padding-vertical: 10px;
+	// --btn-padding-horizontal: 20px;
+	// --btn-padding-top: var(--btn-padding-vertical);
+	// --btn-padding-bottom: var(--btn-padding-vertical);
+	// --btn-padding-right: var(--btn-padding-horizontal);
+	// --btn-padding-left: var(--btn-padding-horizontal);
+	// --btn-border-width: 2px;
+	// --btn-border-style: solid;
+	// --btn-border-color: var(--color-2);
+	// --btn-border-radius: 2px;
+	// --btn-hover-border-color: var(--color-1);
+	// --btn-duration: var(--base-duration);
+	// --btn-timing: var(--base-timing);
+	// --btn-box-shadow-h-offset: 1px;
+	// --btn-box-shadow-v-offset: 1px;
+	// --btn-box-shadow-blur: 1px;
+	// --btn-box-shadow-spread: 1px;
+	// --btn-box-shadow-color: var(--color-1);
+
+	// Input Variables
+	// --input-text-color: var(--color-1);
+	// --input-background: #fff;
+
+	// --input-padding-top: 2em;
+	// --input-padding-bottom: 2em;
+	// --input-padding-left: 2em;
+	// --input-padding-right: 2em;
+
+	// --input-margin-top: 0;
+	// --input-margin-bottom: 1.5em;
+	// --input-margin-left: 0;
+	// --input-margin-right: 0;
+
+	// --input-box-shadow-h-offset: 0px;
+	// --input-box-shadow-v-offset: 0px;
+	// --input-box-shadow-blur: 1px;
+	// --input-box-shadow-spread: 1px;
+	// --input-box-shadow-color: #ffffff;
+
+	// --focus-outline-style: solid;
+	// --focus-outline-color: var(--color-active);
+	// --focus-outline-width: 4px;
+	// --focus-outline-offset: 0;
+
+	// Base Transition
+	// --base-duration: 300ms;
+	// --base-timing: ease-in-out;
+}
+
