@@ -67,3 +67,12 @@
 	animation-iteration-count: infinite;
 	white-space: nowrap;
 }
+
+@mixin focus() {
+    &:focus {
+        outline: 
+            var(--focus-outline-width) 
+            var(--focus-outline-style)
+            var(--focus-outline-color);
+    }
+}

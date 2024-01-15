@@ -1,0 +1,84 @@
+@use 'sass:color';
+
+header {
+    padding: rem(40) 0;
+
+    .row {
+        @include flex(space-between, center, nowrap);
+        gap: rem(60);
+    }
+
+    .page-title {
+        @include flex(flex-start, center, nowrap);
+        gap: rem(14);
+
+        a {
+            font-size: rem(26);
+            color: var(--color-7);
+        }
+
+        .title {
+            text-transform: capitalize;
+            font-family: $open_sans_semibold;
+            font-size: fluid(16, 18);
+        }
+    }
+
+    .search {
+        flex: 1;
+        position: relative;
+        background-color: var(--color-5);
+        border-radius: rem(4);
+        overflow: hidden;
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: rem(12);
+            color: var(--color-7);
+        }
+
+        input {
+            width: 100%;
+            padding: rem(14) rem(40);
+            background-color: var(--color-5);
+            border: none;
+
+            &::placeholder {
+                color: var(--color-7);
+            }
+        }
+    }
+
+    .profile-notif {
+        @include flex(flex-start, center, nowrap);
+        gap: rem(12);
+        
+        .profile-wrap {
+            @include flex(space-between, center, nowrap);
+            gap: rem(12);
+            font-family: $open_sans_semibold;
+
+            .initials {
+                @include flex(center, center, nowrap);
+                width: rem(25);
+                height: rem(25);
+                border-radius: 50%;
+                background-color: #e9f1ff;
+                color: var(--color-3);
+                font-size: rem(10);
+                text-transform: uppercase;
+            }
+
+            .name {
+                text-transform: capitalize;
+                font-size: fluid(10, 12);
+            }
+
+            i {
+                color: var(--color-7);
+            }
+        }
+    }
+}
