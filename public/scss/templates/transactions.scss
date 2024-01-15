@@ -1,0 +1,46 @@
+.transactions {
+    .wrapper {
+        padding-left: fluid(20, 85);
+    }
+
+    .row {
+        // margin-bottom: rem(30);
+    }
+
+    .filter-display {
+        padding-bottom: rem(24);
+        .title {
+            font-family: $open_sans_semibold;
+            font-size: fluid(16, 18);
+            text-transform: capitalize;
+            margin-bottom: rem(12)
+        }
+
+        .filter-btn-grps {
+            @include flex(flex-start, center, nowrap);
+            gap: rem(6);
+        }
+
+        .filter-item {
+            .btn {
+                min-width: rem(120);
+                @include flex(space-between, center, nowrap);
+                font-size: fluid(14, 14);
+            }
+        }
+    }
+
+    .filter-results {
+        padding: rem(40) 0;
+        border-top: 
+            var(--btn-border-width) 
+            var(--btn-border-style) 
+            var(--btn-border-color);
+        border-bottom: 
+            var(--btn-border-width) 
+            var(--btn-border-style) 
+            var(--btn-border-color);
+    }
+
+
+}

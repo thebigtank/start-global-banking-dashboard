@@ -1,11 +1,33 @@
 button {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	outline: none;
+
+    @include focus();
+    
     &.btn {
         background-color: var(--btn-background);
+        text-transform: capitalize;
+        font-family: $open_sans_semibold;
         border: 
             var(--btn-border-width) 
             var(--btn-border-style) 
             var(--btn-border-color);
         border-radius: var(--btn-border-radius);
-        padding: rem(8) rem(12);
+        padding: rem(10) rem(14);
+        // height: rem(48px);
+        min-width: rem(48px);
+        transition: all 250ms ease-in-out;
+
+        i {
+            color: var(--color-7);
+        }
+
+        &:hover {
+            box-shadow: 0 0 rem(12) rem(-4) var(--btn-border-color);
+        }
     }
 }

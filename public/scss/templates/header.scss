@@ -20,7 +20,7 @@ header {
         .title {
             text-transform: capitalize;
             font-family: $open_sans_semibold;
-            font-size: fluid(16, 18);
+            font-size: fluid(16, 20);
         }
     }
 
@@ -35,14 +35,16 @@ header {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: rem(12);
+            left: rem(20);
             color: var(--color-7);
         }
 
         input {
             width: 100%;
-            padding: rem(14) rem(40);
+            padding: rem(14) rem(50);
             background-color: var(--color-5);
+            font-family: $open_sans_regular;
+            font-size: fluid(14, 16);
             border: none;
 
             &::placeholder {
@@ -58,7 +60,6 @@ header {
         .profile-wrap {
             @include flex(space-between, center, nowrap);
             gap: rem(12);
-            font-family: $open_sans_semibold;
 
             .initials {
                 @include flex(center, center, nowrap);
@@ -72,12 +73,7 @@ header {
             }
 
             .name {
-                text-transform: capitalize;
                 font-size: fluid(10, 12);
-            }
-
-            i {
-                color: var(--color-7);
             }
         }
     }

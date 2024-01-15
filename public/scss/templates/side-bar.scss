@@ -68,6 +68,12 @@
                 }
             }
 
+            &.active {
+                a {
+                    background-color: var(--color-8);
+                }
+            }
+
             &.has-sub-menu {
                 > a {
                     margin-bottom: rem(2);

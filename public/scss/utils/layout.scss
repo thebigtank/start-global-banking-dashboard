@@ -22,21 +22,6 @@ a {
 	text-decoration: none;
 }
 
-button {
-	background: none;
-	border: none;
-	color: inherit;
-	cursor: pointer;
-	font: inherit;
-	outline: none;
-
-    @include focus();
-}
-
-input {
-    @include focus();
-}
-
 img {
 	max-width: 100%;
 }
