@@ -1,9 +1,108 @@
 .side-bar {
-    min-width: rem(320);
-    width: rem(320);
+    min-width: rem(300);
+    width: rem(300);
     position: fixed;
 	top: 0;
 	left: 0;
     height: 100%;
+    padding: rem(10);
     background-color: var(--color-3);
+    color: var(--color-1);
+
+    .logo {
+        margin-top: rem(20);
+        margin-bottom: rem(40);
+
+        svg {
+            width: rem(30);
+
+            path {
+                &:nth-child(1) {
+                    fill: transparent;
+                    stroke: var(--color-1);
+                    stroke-width: rem(4);
+                }
+
+                &:nth-child(2) {
+                    fill: var(--color-1);
+                    stroke: var(--color-1);
+                    stroke-width: rem(4);
+                }
+
+                &:nth-child(3) {
+                    fill: transparent;
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+            text-transform: uppercase;
+            padding-left: rem(44);
+            font-size: rem(14);
+            font-family: $open_sans_regular;
+        }
+    }
+
+
+    nav {
+
+    }
+
+    .menu {
+        .menu-item {
+            margin-bottom: rem(30);
+            > a {
+                display: block;
+                text-transform: uppercase;
+                padding: rem(5) rem(40);
+                border-radius: rem(4);
+                font-family: $open_sans_semibold;
+                font-size: fluid(14, 16);
+                @include flex(flex-start, center, nowrap);
+                display: flex;
+                align-items: center;
+                gap: rem(20);
+                transition: all 250ms ease-in-out;
+
+                &:hover {
+                    background-color: var(--color-8);
+                }
+
+                i {
+                    font-size: rem(22);
+                }
+
+                span {
+
+                }
+            }
+
+            &.has-sub-menu {
+                > a {
+                    margin-bottom: rem(2);
+                }
+            }
+        }
+    }
+
+    .sub-menu {
+        padding-left: rem(82);
+        .sub-menu-item {
+            margin-bottom: rem(6);
+            > a {
+                font-size: fluid(13, 14);
+                text-transform: capitalize;
+                font-family: $open_sans_light;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
 }
