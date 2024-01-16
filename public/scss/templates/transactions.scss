@@ -100,128 +100,107 @@
 
     .transaction-list {
         width: 100%;
+        
+        .listings {
+            margin-top: rem(20);
+            display: flex;
+            flex-direction: column;
+            gap: rem(1);
+        }
 
-        .transaction-table {
-            width: 100%;
-            border-collapse: collapse;
+        .item {
+            padding: rem(18);
+            @include flex(space-between, center, nowrap);
+            gap: rem(30);
+            font-family: $open_sans_medium;
+            border: var(--btn-border-width) var(--btn-border-style) var(--btn-border-color);
+            border-radius: rem(4);
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+            background-color: var(--color-1);
 
-            thead {
-                th {
-                    text-align: left;
-                    padding: rem(10) rem(18);
-                    font-size: fluid(12, 12);
-                    text-transform: uppercase;
-                    opacity: 0.8;
+            &:not(&.failed) {
+                &.selected, &:hover {
+                    box-shadow: 0 rem(5) rem(12) rem(-4) var(--color-9);
+                    border-color: var(--color-11);
+                    background-color: var(--color-10);
                 }
             }
 
-            tbody {
-                tr {
-                    outline: var(--btn-border-width) var(--btn-border-style) var(--btn-border-color);
-                    border-radius: rem(8);
-                    cursor: pointer;
-                    transition: all 250ms ease-in-out;
-                    background-color: var(--color-1);
-                    
-                    &.selected, &:hover {
-                        box-shadow: 0 rem(5) rem(12) rem(-4) var(--color-9);
-                        outline-color: var(--color-11);
-                        background-color: var(--color-10);
+
+
+            .date {
+                text-transform: capitalize;
+            }
+
+            .entity {
+                flex: 1;
+                text-transform: uppercase;
+                @include flex(flex-start, center, nowrap);
+                gap: rem(10);
+
+
+                .initials {
+                    @include flex(center, center, nowrap);
+                    width: rem(35);
+                    height: rem(35);
+                    border-radius: 50%;
+                    color: var(--color-1);
+                    font-size: rem(12);
+                    text-transform: uppercase;
+
+                    &.bg-1 {
+                        background-color: var(--color-initial-1);
                     }
 
-                    td {
-                        position: relative;
-                        padding: rem(18);
-                        text-transform: capitalize;
-                        font-family: $open_sans_medium;
-
-                        // &::after {
-                        //     content: '';
-                        //     position:absolute;
-                        //     left:0;
-                        //     right:0;
-                        //     top:1em;
-                        //     bottom:0;
-                        // }
-
-
-
-                        &.source {
-                            @include flex(flex-start, center, nowrap);
-                            gap: rem(14);
-
-
-                            .initials {
-                                @include flex(center, center, nowrap);
-                                width: rem(35);
-                                height: rem(35);
-                                border-radius: 50%;
-                                color: var(--color-1);
-                                font-size: rem(12);
-                                text-transform: uppercase;
-
-                                &.bg-1 {
-                                    background-color: var(--color-initial-1);
-                                }
-
-                                &.bg-2 {
-                                    background-color: var(--color-initial-2);
-                                }
-
-                                &.bg-3 {
-                                    background-color: var(--color-initial-3);
-                                }
-
-                                &.bg-4 {
-                                    background-color: var(--color-initial-4);
-                                }
-
-                                &.bg-disabled {
-                                    background-color: var(--color-disabled);
-                                }
-                            }
-                        }
-
-                        &.amount {
-                            width: rem(25);
-                            position: relative;
-                        }
-
-                        .minus {
-                            padding-right: rem(6);
-                            position: absolute;
-                            left: rem(-2);
-                        }
-
-                        .cents {
-                            font-size: rem(12);
-                        }
-
-                        &.received {
-                            color: var(--color-success);
-                        }
-
-                        &.sent {
-                            color: var(--color-2);
-                        }
-
-                        &.disabled {
-                            color: var(--color-success);
-                        }
+                    &.bg-2 {
+                        background-color: var(--color-initial-2);
                     }
 
-                    &.disabled {
-                        color: var(--color-disabled);
-                        background-color: #fbfcfd;
+                    &.bg-3 {
+                        background-color: var(--color-initial-3);
+                    }
 
-                        // &:hover {
-                        //     box-shadow: unset;
-                        //     outline-color: unset;
-                        //     background-color: #fbfcfd;
-                        // }
+                    &.bg-4 {
+                        background-color: var(--color-initial-4);
+                    }
+
+                    &.bg-disabled {
+                        background-color: var(--color-disabled);
                     }
                 }
+            }
 
+            .amount {
+                position: relative;
+
+                .minus {
+                    padding-right: rem(6);
+                    position: absolute;
+                    left: rem(-20);
+                }
+
+                .cents {
+                    font-size: rem(12);
+                }
+            }
+
+            &.received {
+                .amount {
+                    color: var(--color-success);
+                }
+            }
+
+            &.sent {
+                .amount {
+                    color: var(--color-sent);
+                }
+            }
+
+            &.failed {
+                color: var(--color-disabled);
+                cursor: not-allowed;
+                user-select: none;
             }
         }
     }
