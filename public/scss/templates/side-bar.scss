@@ -6,7 +6,8 @@
 	left: 0;
     height: 100%;
     padding: rem(10);
-    background-color: var(--color-3);
+    background: var(--color-3);
+    background: linear-gradient(0, var(--color-4) 10%, var(--color-3) 60%);
     color: var(--color-1);
 
     .logo {
